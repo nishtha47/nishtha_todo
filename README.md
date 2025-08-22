@@ -155,17 +155,20 @@ Scenario: Delete a todo via API
 
   Create a file called db.json in your project root:
 
+   
+    - You can add more todos as needed.
+
+     - This will act as your API database.
+
   ```
   {
   "todos": [
     { "id": 1, "title": "Buy groceries", "completed": false },
     { "id": 2, "title": "Walk the dog", "completed": true }
   ] }
-```
+  
+  ```
 
-- You can add more todos as needed.
-
-- This will act as your API database.
 
 # Approach -1
 
@@ -249,6 +252,7 @@ DELETE → delete a todo
 ```
 docker stop todomvc-api
 docker rm todomvc-api
+
 ```
 
 # Json Output i got from api url
