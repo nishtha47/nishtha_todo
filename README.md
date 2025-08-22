@@ -67,7 +67,7 @@ src/test/resources/
 
 ```
 git clone https://github.com/nishtha47/nishtha_todo.git
-cd todo-playwright-cucumber-java
+cd nishtha-todo
 ```
 # Install dependencies:
 
