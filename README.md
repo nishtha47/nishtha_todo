@@ -6,22 +6,23 @@ and API testing (RestAssured),integrated with Cucumber BDD for behavior-driven t
 ## Project Structure
 
 src/test/java/
-├── pages/                     # Page Object classes for UI automation
+├── pages/                  # Page Object classes for UI automation
 │   └── TodoPage.java
-├── stepdefinitions/           # Step definitions for Cucumber scenarios
+├── stepdefinitions/        # Step definitions for Cucumber scenarios
 │   ├── TodoUISteps.java
 │   ├── TodoclientapiSteps.java
 │   └── Hooks.java
-├── runners/                   # Cucumber TestNG runner classes
+├── runners/                # Cucumber TestNG runner classes
 │   └── TestRunner.java
-└── api/                       # REST API client for Todos
+└── api/                    # REST API client for Todos
     └── Todoclientapi.java
 
 src/test/resources/
-├── features/                  # Gherkin feature files
+├── features/               # Gherkin feature files
 │   ├── todo_ui.feature
 │   └── todo_api.feature
-└── config.properties          # Configurations (Base URL, etc.)
+└── config.properties       # Configurations (Base URL, credentials, etc.)
+
 
 ## Features Automated
 
