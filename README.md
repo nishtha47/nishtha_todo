@@ -66,7 +66,7 @@ src/test/resources/
 # Clone the repository:
 
 ```
-git clone https://github.com/<your-username>/todo-playwright-cucumber-java.git
+git clone https://github.com/nishtha47/nishtha_todo.git
 cd todo-playwright-cucumber-java
 ```
 # Install dependencies:
