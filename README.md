@@ -151,7 +151,126 @@ Scenario: Delete a todo via API
 
   ## Mocking API Server
 
-  
+  # Create the JSON file
+
+  Create a file called db.json in your project root:
+
+  ```
+  {
+  "todos": [
+    { "id": 1, "title": "Buy groceries", "completed": false },
+    { "id": 2, "title": "Walk the dog", "completed": true }
+  ]
+}
+```
+
+- You can add more todos as needed.
+
+- This will act as your API database.
+
+# Approach -1
+
+# Create a Dockerfile (optional)
+
+If you want a Docker container to serve the API:
+
+```
+# Use official Node.js image
+FROM node:18-alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy package.json and package-lock.json if you have (optional)
+# COPY package*.json ./
+
+# Install json-server globally
+RUN npm install -g json-server
+
+# Copy your JSON file into the container
+COPY db.json .
+
+# Expose port
+EXPOSE 3000
+
+# Command to start json-server
+CMD ["json-server", "--watch", "db.json", "--host", "0.0.0.0", "--port", "3000"]
+
+```
+
+# Build the Docker image
+
+From project root run
+
+```
+docker build -t todomvc-api .
+
+```
+
+# Run the Docker container
+
+```
+docker run -d -p 8080:3000 --name todomvc-api todomvc-api
+
+```
+
+Now your API server is accessible at:
+
+```
+
+http://localhost:8080/todos
+
+```
+
+# Approach -2
+
+# Run json-server in Docker
+
+From Project root run
+
+```
+docker run -d -p 8080:3000 -v $(pwd)/db.json:/data/db.json --name todomvc-api clue/json-server --watch /data/db.json --host 0.0.0.0
+```
+# Test the API
+
+```
+curl http://localhost:8080/todos
+```
+
+GET → list all todos
+
+POST → add a todo
+
+PATCH → update a todo
+
+DELETE → delete a todo
+
+# Stop the Container
+
+```
+docker stop todomvc-api
+docker rm todomvc-api
+```
+
+# Json Output i got from api url
+
+
+<img width="2610" height="1948" alt="image" src="https://github.com/user-attachments/assets/c108ceff-b0c7-4f50-8c01-7ac5cf4c61e6" />
+
+
+## TestAutomation Report for UI Test Cases
+
+
+<img width="1992" height="891" alt="image" src="https://github.com/user-attachments/assets/4bca56e5-14d9-41a0-8df1-1d70342c8e9d" />
+
+
+## TestAutomation Report for API Test Cases
+
+
+<img width="3278" height="1770" alt="image" src="https://github.com/user-attachments/assets/43c2cff1-c75f-477b-9c77-8232c8fb015b" />
+
+
+
  
 
     
