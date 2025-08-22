@@ -162,6 +162,7 @@ Scenario: Delete a todo via API
     { "id": 2, "title": "Walk the dog", "completed": true }
   ]
 }
+
 ```
 
 - You can add more todos as needed.
