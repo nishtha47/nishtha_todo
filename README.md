@@ -1,20 +1,39 @@
-# Playwright_Cucumber_Java
+## TodoMVC Automation Framework (Playwright + RestAssured + Cucumber + Java)
 
-## Overview
+This project provides a hybrid test automation framework for the TodoMVC React App.It covers both UI automation( Playwright+Java)
+and API testing (RestAssured),integrated with Cucumber BDD for behavior-driven testing.
 
-Welcome to Playwright with Cucumber project! This project leverages the power of Playwright, Cucumber, TestNG, Java,
-Maven, and Extent Report to automate and test login test of https://www.saucedemo.com. Whether you are a developer,
-tester, or someone interested in automated testing, this project provides a robust framework to streamline your testing
-processes.
+## Project Structure
 
-Top Features:
+src/test/java/
+├── pages/                     # Page Object classes for UI automation
+│   └── TodoPage.java
+├── stepdefinitions/           # Step definitions for Cucumber scenarios
+│   ├── TodoUISteps.java
+│   ├── TodoclientapiSteps.java
+│   └── Hooks.java
+├── runners/                   # Cucumber TestNG runner classes
+│   └── TestRunner.java
+└── api/                       # REST API client for Todos
+    └── Todoclientapi.java
 
-- Easy to configure just clone and change in config file
-- Browser support (Chrome, Firefox & WebKit)
-- Headless/Headful mode supports
-- JSON Data support
-- Can read XLSX cell's data
-- Generated extended report PDF & html format
-- Generates trace file on failure, which gives in-depth details of Test Case execution.
-- Take screenshot on failure and added in report
-- parallel test support
+src/test/resources/
+├── features/                  # Gherkin feature files
+│   ├── todo_ui.feature
+│   └── todo_api.feature
+└── config.properties          # Configurations (Base URL, etc.)
+
+## Features Automated
+
+# UI Scenarios (Playwright)
+
+Add a new todo
+
+Edit an existing todo
+
+Delete a todo
+
+Toggle (complete/uncomplete) todos
+
+Filter todos (All / Active / Completed)
+
