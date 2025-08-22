@@ -23,19 +23,19 @@ src/test/resources/
 │   ├── todo_ui.feature
 │   └── todo_api.feature
 └── config.properties       # Configurations (Base URL, credentials, etc.)
-
+```
 
 ## Features Automated
 
 # UI Scenarios (Playwright)
 
-Add a new todo
+- Add a new todo
 
-Edit an existing todo
+- Edit an existing todo
 
-Delete a todo
+- Delete a todo
 
-Toggle (complete/uncomplete) todos
+- Toggle (complete/uncomplete) todos
 
-Filter todos (All / Active / Completed)
+- Filter todos (All / Active / Completed)
 
