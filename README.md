@@ -5,6 +5,7 @@ and API testing (RestAssured),integrated with Cucumber BDD for behavior-driven t
 
 ## Project Structure
 
+```
 src/test/java/
 ├── pages/                  # Page Object classes for UI automation
 │   └── TodoPage.java
