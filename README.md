@@ -160,8 +160,7 @@ Scenario: Delete a todo via API
   "todos": [
     { "id": 1, "title": "Buy groceries", "completed": false },
     { "id": 2, "title": "Walk the dog", "completed": true }
-  ]
-}
+  ] }
 ```
 
 - You can add more todos as needed.
